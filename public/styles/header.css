@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 80px;
+}
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #0a3d60;
+}
+
+header .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header .container #logo {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: "Playwrite CU", cursive;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+header .container #logo h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+}
+
+header .container #nav {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding-right: 70px;
+}
+
+header .menu-icon {
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+header .container #nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container #nav ul li {
+    position: relative;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+header .container #nav ul li a {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 100px;
+    text-decoration: none;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+header .container #nav ul li .home-link {
+    width: 112px;
+}
+
+header .container #nav ul li a span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .5s;
+}
+
+header .container #nav ul li a span:nth-child(1) {
+    top: 0;
+}
+
+header .container #nav ul li a span:nth-child(2) {
+    top: 100%;
+}
+
+header .container #nav ul li a:hover span:nth-child(1) {
+    transform: translateY(-100%);
+    transition-delay: 0s;
+}
+  
+header .container #nav ul li a:hover span:nth-child(2) {
+   transform: translateY(-100%);
+   transition-delay: 0s;
+}
+
+header .container #nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0%;
+    height: 50%;
+    background-color: #c5a70e;
+    transition: all .5s;
+}
+
+header .container #nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+    transition-delay: .5s;
+}
+
+@media (max-width: 575.98px) {
+    
+
+    header .container #logo h1 {
+        font-size: 0.5em;
+        padding: 10px;
+        z-index: 20000;
+    }
+
+    header .menu-icon {
+        display: block;
+        padding: 10px;
+    }
+
+    header .container #nav {
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        height: calc(100vh - 15vh);
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(10, 61, 96, 0.95);
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+        z-index: 99;
+    }
+
+    header .container #nav.show {
+        transform: translateY(0);
+    }
+
+    header .container #nav.show ul {
+        flex-direction: column;
+    }
+
+    header .container #nav.show ul li {
+        margin: 20px 0;
+    }
+
+    header .container #nav.show ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    header .container #logo h1 {
+        font-size: 0.5em;
+        padding: 10px;
+        z-index: 20000;
+    }
+
+    header .menu-icon {
+        display: block;
+        padding: 10px;
+    }
+
+    header .container #nav {
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        height: calc(100vh - 15vh);
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(10, 61, 96, 0.95);
+        transform: translateY(-115%);
+        transition: transform 0.5s ease;
+        z-index: 99;
+    }
+
+    header .container #nav.show {
+        transform: translateY(0);
+    }
+
+    header .container #nav.show ul {
+        flex-direction: column;
+    }
+
+    header .container #nav.show ul li {
+        margin: 10px 0;
+    }
+
+    header .container #nav.show ul li a {
+        font-size: 1.5rem;
+        height: 50px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header .container #logo h1 {
+        font-size: 1em;
+        padding: 10px;
+        z-index: 20000;
+    }
+
+    header .menu-icon {
+        display: block;
+        padding: 10px;
+    }
+
+    header .container #nav {
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        height: calc(100vh - 15vh);
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(10, 61, 96, 0.95);
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+        z-index: 99;
+    }
+
+    header .container #nav.show {
+        transform: translateY(0);
+    }
+
+    header .container #nav.show ul {
+        flex-direction: column;
+    }
+
+    header .container #nav.show ul li {
+        margin: 20px 0;
+    }
+
+    header .container #nav.show ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    header .container #logo h1 {
+        font-size: 1em;
+        padding: 10px;
+        z-index: 20000;
+    }
+
+    header .menu-icon {
+        display: block;
+        padding: 10px;
+    }
+
+    header .container #nav {
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        height: calc(100vh - 15vh);
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(10, 61, 96, 0.95);
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+        z-index: 99;
+    }
+
+    header .container #nav.show {
+        transform: translateY(0);
+    }
+
+    header .container #nav.show ul {
+        flex-direction: column;
+    }
+
+    header .container #nav.show ul li {
+        margin: 20px 0;
+    }
+
+    header .container #nav.show ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024.2px) {
+    
+}

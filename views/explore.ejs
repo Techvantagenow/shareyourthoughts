@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <div class="view">
+        <ul>
+            <% if (thoughts.length === 0) { %>
+                <li>No thoughts have been shared yet</li>
+            <% } else { %>
+                <% thoughts.forEach(function(thought, index) { %>
+                    <li> 
+                        <strong><%= thought.title %></strong>
+                        <p><%= thought.text %></p>
+                        <div>
+                            <button onclick="deleteThought('<%= index%>')" class="explore-btn">delete</button>
+                            <button onclick="location.href='/edit/<%= index%>'" class="explore-btn">edit</button>
+                        </div>
+                    </li>
+
+                <% }) %>
+            <% } %>     
+        </ul>
+    </div>
+
+    <script>
+
+        function deleteThought(index) {
+          fetch(`/delete/${index}`, {
+            method: 'DELETE',
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              location.reload();
+            } else {
+              alert('Error deleting thought');
+            }
+          });
+        }
+        
+    </script>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<main>
+  <h1>edit your thought</h1>
+
+  <form action="/update/<%= index %>" method="post">
+    <input type="text" name="title" value="<%= thought.title %>" class="feedback-input-edit" required>
+    <textarea name="text" class="feedback-input-edit" required><%= thought.text %></textarea>
+    <button type="submit" class="express-btn">Update</button>
+  </form>
+
+
+  <%- include("partials/footer.ejs") %>

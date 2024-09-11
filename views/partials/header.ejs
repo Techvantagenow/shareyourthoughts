@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Thoughts</title>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1>share your <br> thoughts</h1>
+            </div>
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+
+                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#fff" class="bi bi-x" viewBox="0 0 16 16" style="display: none;">
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="/" class="home-link">
+                            <span>home</span>
+                            <span>home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/express">
+                            <span>express thoughts</span>
+                            <span>express thoughts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/explore">
+                            <span>explore others</span>
+                            <span>explore others</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('#nav');
+            const hamburgerIcon = document.querySelector('#hamburger-icon');
+            const closeIcon = document.querySelector('#close-icon');
+            
+            nav.classList.toggle("show");
+            
+            if (nav.classList.contains("show")) {
+                hamburgerIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                hamburgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

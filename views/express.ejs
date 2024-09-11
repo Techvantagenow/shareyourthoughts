@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <h1 class="Express-h1">express yourself</h1>
+
+    <form action="/submit" method="post" class="express-form">
+        <input type="text" name="title" placeholder="title" class="feedback-input" required>
+        <textarea name="text" class="feedback-input" placeholder="share your thoughts" required></textarea>
+        <button type="submit" class="express-btn">share</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = document.querySelectorAll(".feedback-input");
+    
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    if (input.value === "") {
+                        input.style.fontFamily = '"Playwrite CU", cursive';
+                    } else {
+                        input.style.fontFamily = "sans-serif";
+                    }
+                });
+            });
+        });
+      </script>
+
+<%- include("partials/footer.ejs") %>

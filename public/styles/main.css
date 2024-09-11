@@ -1,0 +1,686 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 15vh;
+}
+
+main h1 {
+    margin-top: 0px;
+    font-family: "Playwrite CU", cursive;
+    font-size: 0.6rem;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+main p {
+    margin-top: 25px;
+    width: 80%;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.btn button {
+    padding: 25px 25px;
+    margin: 10px 50px;
+    font-family: sans-serif;
+    border: 2px solid #0a3d60;
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all 1s;
+    z-index: 2;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateX(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+.btn button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateY(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+.btn button:hover::before {
+    transform: rotateY(0deg);
+}
+
+.btn button:hover::after {
+    transform: rotateX(0deg);
+}
+
+.btn button:hover {
+    color: #fff;
+    border-color: #c5a70e;
+}
+
+@media (max-width: 575.98px) {
+    main {
+        justify-content: start;
+    }
+    main h1 {
+        margin-top: 75px;
+        font-size: 0.3rem;
+    }
+
+    main p {
+        width: 80%;
+        font-size: 0.2rem;
+        text-align: center;
+    }
+
+    .btn button {
+        padding: 10px 20px;
+        margin: 0px 8px;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    main {
+        justify-content: start;
+    }
+    main h1 {
+        margin-top: 25px;
+        font-size: 0.3rem;
+    }
+
+    main p {
+        margin-top: 25px;
+        width: 80%;
+        font-size: 0.2rem;
+        text-align: center;
+    }
+
+    .btn {
+        padding-top: 25px;
+    }
+
+    .btn button {
+        padding: 10px 20px;
+        margin: 0px 8px;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    main h1 {
+        font-size: 0.6rem;
+    }
+
+    main p {
+        margin-top: 25px;
+        width: 80%;
+        font-size: 0.35rem;
+        text-align: center;
+    }
+
+    .btn {
+        margin-bottom: 75px;
+        padding-top: 25px;
+    }
+
+    .btn button {
+        padding: 10px 20px;
+        margin: 0px 8px;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    main h1 {
+        font-size: 0.6rem;
+    }
+
+    main p {
+        margin-top: 25px;
+        width: 80%;
+        font-size: 0.35rem;
+        text-align: center;
+    }
+
+    .btn {
+        margin-bottom: 75px;
+        padding-top: 25px;
+    }
+
+    .btn button {
+        padding: 10px 20px;
+        margin: 0px 8px;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (min-width: 1024.2px) {
+    
+}
+
+.Express-h1 {
+    margin-top: 50px;
+    position: relative;
+    font-size: 1rem;
+}
+
+form {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+form .feedback-input {
+    width: 50%;
+    border: 2px solid #0a3d60;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 13px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: transparent;
+    outline: 0;
+    font-family: "Playwrite CU", cursive;
+}
+
+form .feedback-input:focus {
+    border: 3px solid #0a3d60;
+}
+
+form textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+form .express-btn {
+    padding: 10px 300px;
+    margin: 10px 50px;
+    font-family: "Playwrite CU", cursive;
+    border: 2px solid #0a3d60;
+    border-radius: 5px;
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all 1s;
+    z-index: 2;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+form .express-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateX(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+form .express-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateY(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+form .express-btn:hover::before {
+    transform: translateX(0);
+}
+
+form .express-btn:hover::after {
+    transform: translateY(0);
+}
+
+form .express-btn:hover {
+    color: #fff;
+    border-color: #c5a70e;
+}
+
+@media (max-width: 575.98px) {
+    .Express-h1 {
+        margin-top: 17%;
+        font-size: 0.3rem;
+    }
+
+    form {
+        gap: 10px;
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+
+    form .feedback-input {
+        width: 80%;
+    }
+
+    form .express-btn {
+        padding: 10px 50px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .Express-h1 {
+        margin-top: 17%;
+        font-size: 0.5rem;
+    }
+
+    form {
+        gap: 10px;
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+
+    form .feedback-input {
+        width: 80%;
+    }
+
+    form textarea {
+        height: 150px;
+    }
+
+    form .express-btn {
+        padding: 10px 50px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Express-h1 {
+        margin-top: 17%;
+        font-size: 0.7rem;
+    }
+
+    form {
+        gap: 10px;
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+
+    form .feedback-input {
+        width: 80%;
+    }
+
+    form textarea {
+        height: 150px;
+    }
+
+    form .express-btn {
+        padding: 10px 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .Express-h1 {
+        margin-top: 17%;
+        font-size: 0.7rem;
+    }
+
+    form {
+        gap: 10px;
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+
+    form .feedback-input {
+        width: 80%;
+    }
+
+    form textarea {
+        height: 150px;
+    }
+
+    form .express-btn {
+        padding: 10px 50px;
+    }
+}
+
+@media (min-width: 1024.2px) {
+    
+}
+
+.view {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.view ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.view ul li {
+    padding: 100px 0px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    border-width: 0px 0px 2px 0px;
+    border-radius: 5px;
+}
+
+.view ul li strong {
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.view ul li p {
+    word-wrap: break-word;
+    word-break: break-all;  
+    white-space: normal;
+}
+
+.view ul li div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.explore-btn {
+    padding: 10px 300px;
+    margin: 10px 50px;
+    font-family: "Playwrite CU", cursive;
+    border: 2px solid #0a3d60;
+    border-radius: 5px;
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all 1s;
+    z-index: 2;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateX(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+.explore-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5a70e;
+    transform: rotateY(90deg);
+    transition: all 1s;
+    z-index: -1;
+}
+
+.explore-btn:hover::before {
+    transform: rotateX(0);
+}
+
+.explore-btn:hover::after {
+    transform: rotateY(0);
+}
+
+.explore-btn:hover {
+    color: #fff;
+}
+
+@media (max-width: 575.98px) {
+
+    .view ul li strong {
+        font-size: 0.23rem;
+        text-align: center;
+    }
+
+    .explore-btn {
+        padding: 5px 25px;
+        margin: 0px 8px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .view ul li strong {
+        font-size: 0.3rem;
+        text-align: center;
+    }
+
+    .explore-btn {
+        padding: 5px 25px;
+        margin: 0px 8px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .view ul li strong {
+        font-size: 0.4rem;
+        text-align: center;
+    }
+
+    .explore-btn {
+        padding: 5px 25px;
+        margin: 0px 8px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .view ul li strong {
+        font-size: 0.4rem;
+        text-align: center;
+    }
+
+    .explore-btn {
+        padding: 10px 50px;
+        margin: 0px 8px;
+    }
+}
+
+@media (min-width: 1024.2px) {
+    
+}
+
+.T-content {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.T-content h1 {
+    font-size: 20vh;
+    font-family: sans-serif;
+}
+
+.T-content h2 {
+    font-size: 10vh;
+    font-family: "Playwrite CU", cursive;
+    position: relative;
+    color: transparent;
+}
+
+.T-content h2::before {
+    content: 'for sharing your thoughts';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    color: #c5a70e;
+    animation: animate-thankyou 1.5s 1 forwards;
+    overflow: hidden;
+    padding: 15px;
+}
+
+@keyframes animate-thankyou {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .T-content h1 {
+        font-size: 0.7rem;
+    }
+
+    .T-content h2 {
+        font-size: 0.25rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .T-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .T-content h2 {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .T-content h1 {
+        font-size: 2rem;
+    }
+
+    .T-content h2 {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1024.2px) {
+    
+}
+
+form .feedback-input-edit {
+    width: 50%;
+    border: 2px solid #0a3d60;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 13px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: transparent;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+form .feedback-input-edit:focus {
+    border: 3px solid #0a3d60;
+}
+
+@media (max-width: 575.98px) {
+    form .feedback-input-edit {
+        width: 80%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    
+}
+
+@media (min-width: 1024.2px) {
+    
+}
